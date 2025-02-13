@@ -6,7 +6,8 @@ The maximum number of columns in the sheet, which is going to help us iterate th
 After this, a dictionary object "data" is created in order to store all the parsed data.
 Now, we enter a for loop with range as 1 to the column_no, which iterates through the columns, and also contains 3 other for loops which iterate through the rows as per certain conditions.
 For example, when i=1, we work with just column no. 1.
-Then, according to the spreadsheet, rows 4-13 give us the breakfast items, rows 15-23 give us the lunch items, and rows 25-32 give us the dinner items.
+Then, according to the spreadsheet, breakfast items begin from row 4, and continue till a particular row depending on how many items are present in the excel. to tackle this, a
+function is created which would determine at which row the last breakfast/lunch/dinner item is present, by checking when the "day" repeats in that column.
 In each loop, we obtain the required cell values using the syntax, and then check for two conditions:
 1) whether the cell is blank (we verify this by checking if the item turns to be of NoneType)
 2) whether the cell contains ******* (we verify this by checking if the item contains * )
